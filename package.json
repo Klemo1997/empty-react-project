@@ -1,0 +1,11 @@
+{
+  "name": "react-blank-project",
+  "version": "1.0.0",
+  "description": "Blank react project with typescript setup",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "klemo",
+  "license": "ISC"
+}
