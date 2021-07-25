@@ -28,15 +28,20 @@ module.exports = {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
             },
+            {
+                test: /\.scss$/,
+                use: ['style-loader', 'css-loader', 'sass-loader'],
+                exclude: /node_modules/,
+            },
         ]
     },
     resolve: {
         extensions: [
-            '.ts', '.js', '.json', '.tsx'
+            '.ts', '.js', '.json', '.tsx', '.scss'
         ]
     },
     devServer: {
-        port: 4001,
+        port: 3000,
         open: true,
         hot: true
     },
