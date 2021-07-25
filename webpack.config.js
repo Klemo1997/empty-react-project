@@ -19,15 +19,24 @@ module.exports = {
             },
             {
                 test: /\.(ts|tsx)?$/,
-                loader: "awesome-typescript-loader",
+                loader: "ts-loader",
                 exclude: /node_modules/,
-            }
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            },
         ]
     },
     resolve: {
         extensions: [
             '.ts', '.js', '.json', '.tsx'
         ]
+    },
+    devServer: {
+        port: 4001,
+        open: true,
+        hot: true
     },
     plugins: [
         new HtmlWebpackPlugin({
