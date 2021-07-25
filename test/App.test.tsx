@@ -1,6 +1,6 @@
-import React from "react";
-import {createContainer, ContainerTestInterface} from "./domManipulators";
-import App from "../src/App";
+import React from 'react'
+import { createContainer, ContainerTestInterface } from './domManipulators'
+import App from '../src/App'
 
 describe('App', () => {
     let domManipulator: ContainerTestInterface
@@ -10,8 +10,10 @@ describe('App', () => {
     })
 
     it('renders a hello world div', () => {
-        domManipulator.render(<App/>)
+        domManipulator.render(<App />)
 
-        expect(domManipulator.container.querySelector('h1')?.textContent).toEqual('Custom react template Application')
-    });
+        expect(
+            domManipulator.container.querySelector('h1')?.textContent
+        ).toEqual('Custom react template Application')
+    })
 })
