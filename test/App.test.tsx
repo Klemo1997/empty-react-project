@@ -12,6 +12,6 @@ describe('App', () => {
     it('renders a hello world div', () => {
         domManipulator.render(<App/>)
 
-        expect(domManipulator.container.textContent).toEqual('Hello world')
+        expect(domManipulator.container.querySelector('h1')?.textContent).toEqual('Custom react template Application')
     });
 })
