@@ -21,10 +21,20 @@
     "plugins": [
         "react",
         "@typescript-eslint",
-        "eslint-plugin-prettier"
+        "eslint-plugin-prettier",
+        "eslint-plugin-import"
     ],
     "rules": {
         "prettier/prettier": "error",
-        "semi": ["error", "never"]
+        "semi": ["error", "never"],
+        "import/no-restricted-paths": [
+            "error",
+            {
+                "zones": [
+                    // disallow import from test in src
+                    { "target": "src", "from": "test" }
+                ]
+            }
+        ]
     }
 }
