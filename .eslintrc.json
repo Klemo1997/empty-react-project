@@ -35,6 +35,7 @@
                     { "target": "src", "from": "test" }
                 ]
             }
-        ]
+        ],
+        "@typescript-eslint/no-explicit-any": "error"
     }
 }
