@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
     mode: process.env.MODE || 'development',
@@ -43,6 +44,18 @@ module.exports = {
             template: "public/index.html",
             hash: true, // This is useful for cache busting
             filename: 'index.html'
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, 'public'),
+                    globOptions: {
+                        ignore: [
+                            '**/index.html'
+                        ]
+                    }
+                }
+            ]
         })
     ]
 }
