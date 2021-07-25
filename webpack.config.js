@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
     entry: "./src/index.tsx",
@@ -66,6 +67,10 @@ module.exports = {
             extensions: [
                 'tsx', 'ts', 'jsx', 'js',
             ]
-        })
+        }),
+        new StylelintPlugin({
+            configFile: '.stylelintrc.json',
+            files: 'src/styles/'
+        }),
     ]
 }
