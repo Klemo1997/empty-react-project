@@ -9,7 +9,7 @@ describe('App', () => {
         domManipulator = createContainer()
     })
 
-    it('renders a hello world div', () => {
+    it('renders a h1 header with specified text', () => {
         domManipulator.render(<App />)
 
         expect(
