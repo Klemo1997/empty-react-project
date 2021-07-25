@@ -1,6 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const ESLintPlugin = require('eslint-webpack-plugin');
+
 
 module.exports = {
     mode: process.env.MODE || 'development',
@@ -61,6 +63,15 @@ module.exports = {
                         ]
                     }
                 }
+            ]
+        }),
+        new ESLintPlugin({
+            files: [
+                'test/',
+                'src/',
+            ],
+            extensions: [
+                'tsx', 'ts', 'jsx', 'js',
             ]
         })
     ]

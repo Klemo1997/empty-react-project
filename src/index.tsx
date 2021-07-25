@@ -1,8 +1,8 @@
-import React from "react"
-import ReactDOM from "react-dom"
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { hot } from 'react-hot-loader'
 import App from './App'
-import {hot} from 'react-hot-loader'
 
 const HotLoadedApp = hot(module)(App)
 
-ReactDOM.render(<HotLoadedApp/>, document.getElementById('root'))
+ReactDOM.render(<HotLoadedApp />, document.getElementById('root'))

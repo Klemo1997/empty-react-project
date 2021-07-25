@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 import './styles/App.scss'
 
 const App = (): React.ReactElement => (
@@ -12,7 +12,11 @@ const App = (): React.ReactElement => (
             <li>SCSS/SASS importing</li>
         </ul>
         <div>
-            <img className="react-logo" src="/react-logo.png" alt="React logo"/>
+            <img
+                className="react-logo"
+                src="/react-logo.png"
+                alt="React logo"
+            />
         </div>
     </div>
 )
