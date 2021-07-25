@@ -1,0 +1,27 @@
+:root {
+  --bg-color: #343434;
+  --text-color: whitesmoke;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.main-container {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.react-logo {
+  width: 256px;
+  animation: 4s spin infinite linear;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
