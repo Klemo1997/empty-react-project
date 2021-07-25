@@ -3,9 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin');
 
-
 module.exports = {
-    mode: process.env.MODE || 'development',
     entry: "./src/index.tsx",
     output: {
         path: path.resolve(__dirname, "dist"),
@@ -41,11 +39,6 @@ module.exports = {
         extensions: [
             '.ts', '.js', '.json', '.tsx', '.scss'
         ]
-    },
-    devServer: {
-        port: 3000,
-        open: true,
-        hot: true
     },
     plugins: [
         new HtmlWebpackPlugin({

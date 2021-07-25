@@ -5,4 +5,9 @@ import App from './App'
 
 const HotLoadedApp = hot(module)(App)
 
-ReactDOM.render(<HotLoadedApp />, document.getElementById('root'))
+ReactDOM.render(
+    <React.StrictMode>
+        <HotLoadedApp />
+    </React.StrictMode>,
+    document.getElementById('root')
+)
